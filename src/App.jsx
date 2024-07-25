@@ -72,10 +72,11 @@ function App() {
 	const ctxValue = {
 		items: shoppingCart.items,
 		addItemToCart: handleAddItemToCart,
+		updateItemQuantity: handleUpdateCartItemQuantity,
 	};
 
 	return (
-		<CartContext.Provider value={shoppingCart}>
+		<CartContext.Provider value={ctxValue}>
 			<Header />
 			<Shop>
 				{DUMMY_PRODUCTS.map((product) => (
